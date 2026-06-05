@@ -20,19 +20,13 @@ function atualizarLista() {
 
   lista.innerHTML = "";
 
-  estoque.forEach((item, index) => {
+  estoque.forEach((item) => {
     lista.innerHTML += `
-      <li>
-
+        <li>
         ${item.produto}
         - Quantidade: ${item.quantidade}
-
-        <button onclick="excluirProduto(${index})">
-          Excluir
-        </button>
-
-      </li>
-    `;
+        </li>
+        `;
   });
 
   document.getElementById("totalProdutos").innerText = estoque.length;
